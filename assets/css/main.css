@@ -3327,3 +3327,20 @@ input, select, textarea {
 			}
 
 		}
+
+/* Wrapper2 */
+
+#wrapper2 > * > .inner {
+	width: 50%;
+	max-width: 68em;
+	margin: 0 auto;
+	padding: 0 2.5em;
+}
+
+	@media screen and (max-width: 736px) {
+
+		#wrapper2 > * > .inner {
+			padding: 0 1.25em;
+		}
+
+	}

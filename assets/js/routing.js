@@ -1,13 +1,18 @@
+const quesiton_title = document.getElementById("question_title")
+
+
+
+
 // Get the button and container elements from HTML:
-const button = document.getElementById("theButton")
+const button = document.getElementById("submitButton")
 const data = document.getElementById("info")
 // Create an array of cars to send to the server:
-const cars = { "question_id":"1"}
+const cars = { "question_id":"12"}
 
 // Create an event listener on the button element:
 button.onclick= function(){
  // Get the reciever endpoint from Python using fetch:
- fetch("http://127.0.0.1:5000/", 
+ fetch("https://hackermerced-api.herokuapp.com/", 
  {
  method: 'POST',
  headers: {
@@ -25,7 +30,9 @@ button.onclick= function(){
  
  // Log the response data in the console
  console.log(jsonResponse)
+ quesiton_title.innerHTML = jsonResponse["question_title"]
  } 
  ).catch((err) => console.error(err));
  
  }
+
