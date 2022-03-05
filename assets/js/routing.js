@@ -1,17 +1,31 @@
-// Sending and receiving data in JSON format using POST method
-//
-// var xhr = new XMLHttpRequest();
-// var url = "https://hackermerced-api.herokuapp.com/";
-// xhr.open("POST", url, true);
+// Get the button and container elements from HTML:
+const button = document.getElementById("theButton")
+const data = document.getElementById("info")
+// Create an array of cars to send to the server:
+const cars = { "question_id":"1"}
 
-// xhr.setRequestHeader("Content-Type", "application/json");
-// xhr.onreadystatechange = function () {
-//     if (xhr.readyState === 4 && xhr.status === 200) {
-//         var json = JSON.parse(xhr.responseText);
-//         console.log(json.email + ", " + json.password);
-//     }
-// };
-// var data = JSON.stringify({"question_id": "1"});
-// xhr.send(data);
-
-console.log("helloworld");
+// Create an event listener on the button element:
+button.onclick= function(){
+ // Get the reciever endpoint from Python using fetch:
+ fetch("http://127.0.0.1:5000/", 
+ {
+ method: 'POST',
+ headers: {
+ 'Content-type': 'application/json',
+ 'Accept': 'application/json'
+ },
+ // Strigify the payload into JSON:
+ body:JSON.stringify(cars)}).then(res=>{
+ if(res.ok){
+ return res.json()
+ }else{
+ alert("something is wrong")
+ }
+ }).then(jsonResponse=>{
+ 
+ // Log the response data in the console
+ console.log(jsonResponse)
+ } 
+ ).catch((err) => console.error(err));
+ 
+ }
