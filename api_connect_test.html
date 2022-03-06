@@ -28,19 +28,30 @@
         <div class="inner">
           <header>
             <h1 id="question_title"></h1>
+
             <h3>Lesson</h3>
-            <p>Modulo or Mod Operator, here when we divide 2 numbers, we receive the quotient as the final answer, With Mod operator, we can find the remainder of the whole division like when we divide 5/2 we get 2.5 which is quotient but to get remainder we do 5%2 which is 1</p>
+            <p id="question_lesson"></p>
+
             <h3>Question</h3>
-            <p>This is a well thought out question about strings in python</p>
-            <button id="theButton" class="button primary fit">a: 3</button>
+            <p id="question_desc"></p>
+
+            <!-- Hidden results -->
+            <h1 id="resultCorrect" class="resultCorrect"></h1>
+            <h1 id="resultWrong" class="resultWrong"></h1>
+            <h3 id="resultCorrectSub" class="resultCorrect"></h3>
+
+            <button id="question_a" class="button small fit" onclick="changeAnswer('a')"></button>
             <p></p>
-            <button id="theButton" class="button primary fit">b: 4</button>
+            <button id="question_b" class="button small fit" onclick="changeAnswer('b')"></button>
             <p></p>
-            <button id="theButton" class="button primary fit">c: 42</button>
+            <button id="question_c" class="button small fit" onclick="changeAnswer('c')"></button>
             <p></p>
-            <button id="theButton" class="button primary fit">d: 5</button>
+            <button id="question_d" class="button small fit" onclick="changeAnswer('d')"></button>
             <p></p>
-            <button id="submitButton" class="button fit">Submit Answer</button>
+            <button id="submitButton" class="submitButton button primary fit">Submit Answer</button>
+            <h1></h1>
+            <button id="nextButton" class="nextButton button">Next Question</button>
+            
           </header>
         </div>
       </div>

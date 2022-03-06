@@ -2548,6 +2548,77 @@ input, select, textarea {
 				background-color: #ee5f81;
 			}
 
+		/* correct */
+
+		input[type="submit"].correct,
+		input[type="reset"].correct,
+		input[type="button"].correct,
+		button.correct,
+		.button.correct {
+			box-shadow: none;
+			background-color: #139e13;
+			color: #ffffff !important;
+		}
+
+
+		/* correct remainders */
+
+		input[type="submit"].correct_r,
+		input[type="reset"].correct_r,
+		input[type="button"].correct_r,
+		button.correct_r,
+		.button.correct_r {
+			box-shadow: inset 0 0 0 2px #139e13;
+			background-color: #ffffff;
+			color: #139e13 !important;
+		}
+		
+
+
+
+		/* wronge */
+
+		input[type="submit"].wronge,
+		input[type="reset"].wronge,
+		input[type="button"].wronge,
+		button.wronge,
+		.button.wronge {
+			box-shadow: none;
+			background-color: #d42f2f;
+			color: #ffffff !important;
+		}
+
+			input[type="submit"].wronge:hover,
+			input[type="reset"].wronge:hover,
+			input[type="button"].wronge:hover,
+			button.wronge:hover,
+			.button.wronge:hover {
+				background-color: #d42f2f;
+			}
+
+			input[type="submit"].wronge:active,
+			input[type="reset"].wronge:active,
+			input[type="button"].wronge:active,
+			button.wronge:active,
+			.button.wronge:active {
+				background-color: #d42f2f;
+			}
+
+
+		/* wronge remainder */
+
+		input[type="submit"].wronge_r,
+		input[type="reset"].wronge_r,
+		input[type="button"].wronge_r,
+		button.wronge_r,
+		.button.wronge_r {
+			box-shadow: inset 0 0 0 2px #d42f2f;
+			background-color: #ffffff;
+			color: #d42f2f !important;
+		}
+
+
+
 		input[type="submit"].disabled, input[type="submit"]:disabled,
 		input[type="reset"].disabled,
 		input[type="reset"]:disabled,
@@ -2572,7 +2643,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -3344,3 +3415,20 @@ input, select, textarea {
 		}
 
 	}
+
+/* Hid result content */
+.resultCorrect {
+	display: none
+}
+
+.resultWrong {
+	display: none
+}
+
+.nextButton {
+	display: none;
+}
+
+.submitButton {
+	display: block;
+}
