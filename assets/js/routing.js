@@ -35,6 +35,8 @@ var trackDict = {
 var question_id_index = 0
 var userSelection = null
 var correctAnswer = null
+var scoreValue = 0
+var timeValue = 0
 
 var correctAnswerDict = {}
 
@@ -49,6 +51,8 @@ function getQueryVariable(variable){
         }
     }
 }
+
+
 
 function changeAnswer(letter) {
     userSelection = letter
@@ -156,14 +160,14 @@ nextButton.onclick = function() {
     resultCorrect.style.display = 'none';
     resultWrong.style.display = 'none'
     resultCorrectSub.style.display = 'none';
-    nextButton.style.display = 'nont';
+    nextButton.style.display = 'none';
     submitButton.style.display = 'block'
 
     question_id_index = question_id_index + 1
     if (question_id_index >= 5) {
         console.log('The track has reached its end')
         // Simulate an HTTP redirect:
-        window.location.replace("results.html");
+        window.location.replace("results.html?scoreValue=" + scoreValue + "&timeValue=" + timeValue);
     } else {
         callAPI()
     }
@@ -191,6 +195,9 @@ submitButton.onclick = function() {
                 question_c.classList.add('correct_r')
                 question_d.classList.add('correct_r')
 
+                // Increasing score
+                scoreValue = scoreValue + 1
+
                 // Hidden result
                 resultCorrect.innerHTML = "Great Job!"
                 resultCorrectSub.innerHTML = "The correct answer is: " + correctAnswerDict[correctAnswer]
@@ -213,6 +220,9 @@ submitButton.onclick = function() {
                 question_c.classList.add('correct_r')
                 question_d.classList.add('correct_r')
 
+                // Increasing score
+                scoreValue = scoreValue + 1
+
                 // Hidden result
                 resultCorrect.innerHTML = "Great Job!"
                 resultCorrectSub.innerHTML = "The correct answer is: " + correctAnswerDict[correctAnswer]
@@ -234,6 +244,9 @@ submitButton.onclick = function() {
                 question_b.classList.add('correct_r')
                 question_d.classList.add('correct_r')
 
+                // Increasing score
+                scoreValue = scoreValue + 1  
+
                 // Hidden result
                 resultCorrect.innerHTML = "Great Job!"
                 resultCorrectSub.innerHTML = "The correct answer is: " + correctAnswerDict[correctAnswer]
@@ -254,6 +267,9 @@ submitButton.onclick = function() {
                 question_a.classList.add('correct_r')
                 question_b.classList.add('correct_r')
                 question_c.classList.add('correct_r')
+
+                // Increasing score
+                scoreValue = scoreValue + 1
 
                 // Hidden result
                 resultCorrect.innerHTML = "Great Job!"
@@ -357,5 +373,11 @@ submitButton.onclick = function() {
 
 
 }
+
+function incrementSeconds() {
+    timeValue += 1;
+}
+
+setInterval(incrementSeconds, 1000);
 
 window.onload = callAPI    // Call API function on initial load
