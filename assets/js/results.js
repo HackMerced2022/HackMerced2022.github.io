@@ -22,6 +22,7 @@ function getQueryVariable(variable){
 }
 
 function getUsername() {
+    // Get username from html
     username = document.getElementById('TextUsername').value;
     callAPI()
 
@@ -29,6 +30,7 @@ function getUsername() {
 }
 
 function callAPI() {
+    // Call API for user ranking
 
     var jsonSend = {"username": username,
                     'questions_right': scoreValue,

@@ -55,6 +55,8 @@ function getQueryVariable(variable){
 
 
 function changeAnswer(letter) {
+    // Handles user selecting boxes
+
     userSelection = letter
     if (userSelection == 'a') {
         question_a.classList.add('primary');
@@ -87,6 +89,7 @@ function changeAnswer(letter) {
 }
 
 function callAPI() {
+    // Calls API to grap question informatoin
 
     // Create an array of keys to send to the server:
     var question_id = trackDict[trackValue][question_id_index]
@@ -131,6 +134,7 @@ function callAPI() {
 }
 
 nextButton.onclick = function() {
+    // Stages page for next question response
 
     question_id_index = question_id_index + 1
     if (question_id_index >= 5) {
@@ -179,6 +183,7 @@ nextButton.onclick = function() {
 
 // Create an event listener on the button element:
 submitButton.onclick = function() {
+    // Sets the correct or wrong answer state on the page
 
     if (userSelection == null) {
         // Need to select input
@@ -378,6 +383,7 @@ submitButton.onclick = function() {
 
 }
 
+// counts seconds
 function incrementSeconds() {
     timeValue += 1;
 }
