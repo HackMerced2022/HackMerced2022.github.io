@@ -131,6 +131,16 @@ function callAPI() {
 }
 
 nextButton.onclick = function() {
+
+    question_id_index = question_id_index + 1
+    if (question_id_index >= 5) {
+        console.log('The track has reached its end')
+        // Simulate an HTTP redirect:
+        window.location.replace("results.html?scoreValue=" + scoreValue + "&timeValue=" + timeValue);
+    } else {
+        callAPI()
+    }
+
     question_a.classList.remove('primary');
     question_b.classList.remove('primary')
     question_c.classList.remove('primary')
@@ -163,14 +173,8 @@ nextButton.onclick = function() {
     nextButton.style.display = 'none';
     submitButton.style.display = 'block'
 
-    question_id_index = question_id_index + 1
-    if (question_id_index >= 5) {
-        console.log('The track has reached its end')
-        // Simulate an HTTP redirect:
-        window.location.replace("results.html?scoreValue=" + scoreValue + "&timeValue=" + timeValue);
-    } else {
-        callAPI()
-    }
+    scroll(0,0)
+
 }
 
 // Create an event listener on the button element:

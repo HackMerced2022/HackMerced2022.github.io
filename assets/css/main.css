@@ -3416,6 +3416,23 @@ input, select, textarea {
 
 	}
 
+/* Wrapper3 */
+
+#wrapper3 > * > .inner {
+	width: 75%;
+	max-width: 68em;
+	margin: 0 auto;
+	padding: 0 2.5em;
+}
+
+	@media screen and (max-width: 736px) {
+
+		#wrapper3 > * > .inner {
+			padding: 0 1.25em;
+		}
+
+	}
+
 /* Hid result content */
 .resultCorrect {
 	display: none

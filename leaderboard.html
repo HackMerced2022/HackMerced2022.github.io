@@ -15,62 +15,50 @@
           <div class="inner">
 
             <!-- Logo -->
-              <a href="index.html" class="logo">
-                <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
-              </a>
-
+            <a href="index.html" class="logo">
+            <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+            </a>
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
           </div>
         </header>
+            <!-- Menu -->
+            <nav id="menu">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="api_connect_test.html?track=one">API Connect Test</a></li>
+                    <li><a href="generic.html">Tempus etiam</a></li>
+                    <li><a href="generic.html">Consequat dolor</a></li>
+                    <li><a href="elements.html">Elements</a></li>
+                </ul>
+            </nav>
       </div>
 
-    <div id="wrapper2">
+    <div id="wrapper3">
       <div id="main">
         <div class="inner">
           <header>
             
-            <h1>Leader Boards</h1>
+            <h1>Leaderboard</h1>
             <div class="table-wrapper">
-                <table>
+                <table id="leaderboard">
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Description</th>
-                            <th>Price</th>
+                            <th>Total Correct Questions</th>
+                            <th>Total Wrong Questions</th>
+                            <th>Accuracy</th>
+                            <th>Total Time (s)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Item One</td>
-                            <td>Ante turpis integer aliquet porttitor.</td>
-                            <td>29.99</td>
-                        </tr>
-                        <tr>
-                            <td>Item Two</td>
-                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                            <td>19.99</td>
-                        </tr>
-                        <tr>
-                            <td>Item Three</td>
-                            <td> Morbi faucibus arcu accumsan lorem.</td>
-                            <td>29.99</td>
-                        </tr>
-                        <tr>
-                            <td>Item Four</td>
-                            <td>Vitae integer tempus condimentum.</td>
-                            <td>19.99</td>
-                        </tr>
-                        <tr>
-                            <td>Item Five</td>
-                            <td>Ante turpis integer aliquet porttitor.</td>
-                            <td>29.99</td>
-                        </tr>
+                        <!-- To Be Populated -->
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td>100.00</td>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
 
@@ -79,6 +67,12 @@
       </div>
     </div>
     <!-- Link to the JavaScript file here: -->
-    <script src="assets/js/results.js"></script>
+    <script src="assets/js/leaderboard.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
